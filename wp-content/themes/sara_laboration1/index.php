@@ -1,2 +1,17 @@
+<?php include 'helper.php';
+get_header();
+?>
+
+<?php wp_body_open() ?>
+<p>Här finns huvudmenyn?</p>
 <?php
-//silence
+
+
+while (have_posts()) {
+  the_post();
+  the_title();
+  the_content();
+  the_post_thumbnail();
+}
+
+?>
