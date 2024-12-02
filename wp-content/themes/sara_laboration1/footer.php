@@ -5,6 +5,7 @@ include 'helper.php'; ?>
   <?php
   echo "Hallå jag är en footer" ?>
 </footer>
+</div>
 </body>
 
 </html>

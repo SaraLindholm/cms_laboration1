@@ -9,7 +9,6 @@ include 'helper.php'; ?>
   <title>sara_laboration1</title>
   <?php wp_head() ?>
 </head>
-
 <body <?php body_class() ?>>
   <div id="wrap">
     <header id="header">
