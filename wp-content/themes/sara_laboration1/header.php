@@ -11,6 +11,26 @@ include 'helper.php'; ?>
 </head>
 
 <body <?php body_class() ?>>
-  <header>
-    <?php  wp_nav_menu(); ?>;
-  </header>
+  <div id="wrap">
+    <header id="header">
+      <a class="logo" href="index.html">Labb 1</a>
+      <div class="container">
+        <div class="row">
+          <!-- för smala skärmar? -->
+          <div class="col-xs-8 col-sm-6"></div>
+          <div class="col-sm-6 hidden-xs"></div>
+        </div>
+      </div>
+    </header>
+    <nav id="nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul id="menu-huvudmeny" class="menu">
+              <?php wp_nav_menu(); ?>;
+              <li class="current-meny-item"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
