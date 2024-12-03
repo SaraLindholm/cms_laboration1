@@ -20,8 +20,6 @@ get_header();
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="bild-text">
           <?php } ?>
         </div>
-
-
       </div>
     </div>
   </section>

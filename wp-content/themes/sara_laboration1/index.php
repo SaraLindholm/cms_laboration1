@@ -1,8 +1,6 @@
 <?php include 'helper.php';
 get_header();
 ?>
-
-<?php wp_body_open() ?>
 <p>Här finns huvudmenyn?</p>
 <?php
 

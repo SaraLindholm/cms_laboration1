@@ -2,10 +2,6 @@
 include 'helper.php';
 get_header();
 ?>
-
-<?php wp_body_open() ?>
-
-
 <main>
   <section>
     <div class="container">
