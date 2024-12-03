@@ -8,16 +8,20 @@ get_header();
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-9">
           <?php
-          while (have_posts()) { ?>
+          while (have_posts()) {
+            the_post(); ?>
             <h1><?php the_title(); ?></h1>
-
-
-
-
-
-
+            <p><?php the_content(); ?></p>
           <?php } ?>
         </div>
+        <!--visar bild om det finns -->
+        <div class="col-xs-12 col-sm-4 col-md-6">
+          <?php if (has_post_thumbnail()) { ?>
+            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="bild-text">
+          <?php } ?>
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -26,15 +30,5 @@ get_header();
 
 
 
-
-
-<p>page-mall</p>
-<?php
-while (have_posts()) {
-  the_post();
-  the_title();
-  the_content();
-  the_post_thumbnail();
-} ?>
 
 <?php get_footer() ?>

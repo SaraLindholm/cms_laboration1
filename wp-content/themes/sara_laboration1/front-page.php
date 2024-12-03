@@ -14,7 +14,8 @@ get_header();
           <?php
 
           while (have_posts()) { ?>
-            <div class="hero" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="hero-image">
+            <div class="hero">
+              <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="hero-image">
               <div class="text"><?php the_post(); ?>
                 <div>
                   <h1><?php the_title(); ?></h1>
