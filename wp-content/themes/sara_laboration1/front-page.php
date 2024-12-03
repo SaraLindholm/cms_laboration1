@@ -9,18 +9,22 @@ get_header();
 <main>
   <section>
     <div class="container">
-      <?php
+      <div class="row">
+        <div class="col-xs-12">
+          <?php
 
-      while (have_posts()) { ?>
-        <div class="hero" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="hero-image">>
-          <div class="text"><?php the_post(); ?>
-            <div>
-              <h1><?php the_title(); ?></h1>
-              <div><?php the_content(); ?></div>
+          while (have_posts()) { ?>
+            <div class="hero" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="hero-image">
+              <div class="text"><?php the_post(); ?>
+                <div>
+                  <h1><?php the_title(); ?></h1>
+                  <div><?php the_content(); ?></div>
+                </div>
+              </div>
             </div>
-          </div>
+          <?php } ?>
         </div>
-      <?php } ?>
+      </div>
     </div>
   </section>
 </main>

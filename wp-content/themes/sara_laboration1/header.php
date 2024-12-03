@@ -9,10 +9,12 @@ include 'helper.php'; ?>
   <title>sara_laboration1</title>
   <?php wp_head() ?>
 </head>
+
 <body <?php body_class() ?>>
+  <?php wp_body_open() ?>
   <div id="wrap">
     <header id="header">
-      <a class="logo" href="index.html">Labb 1</a>
+      <a class="logo" href="<?php echo get_permalink(get_page_by_path('home')); ?>">Labb 1</a>
       <div class="container">
         <div class="row">
           <!-- för smala skärmar? -->
