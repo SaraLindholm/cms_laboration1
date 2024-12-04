@@ -39,6 +39,7 @@ get_header();
               </ul>
               <p><?php the_excerpt(); ?>
               </p>
+              <?php the_posts_pagination(); ?>
             </article>
             <?php get_the_posts_pagination(); ?>
           <?php } ?>
