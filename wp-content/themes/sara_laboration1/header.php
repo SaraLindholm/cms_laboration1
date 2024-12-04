@@ -21,6 +21,7 @@ include 'helper.php'; ?>
           </div>
           <div class="col-sm-6 hidden-xs">
             <form class="searchform">
+              
               <div><?php get_search_form(); ?>
               </div>
             </form>

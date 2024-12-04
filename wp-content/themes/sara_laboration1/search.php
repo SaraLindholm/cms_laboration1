@@ -7,8 +7,8 @@ get_header();
     <div class="container">
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-9">
-          <h1><?php the_title(); ?></h1>
-          <?php
+          <h1>Du har sökt på: '<?php the_title(); ?>'</h1>          <?php
+          get_search_query();
 
           while (have_posts()) { ?>
             <?php get_search_query(); ?>
