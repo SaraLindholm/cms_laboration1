@@ -37,7 +37,7 @@ get_header();
                                             ?>
                 </li>
               </ul>
-              <p><?php the_excerpt(); ?>
+              <p><?php the_content(); ?>
               </p>
             </article>
           <?php } ?>

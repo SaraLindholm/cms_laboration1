@@ -40,6 +40,7 @@ get_header();
               <p><?php the_excerpt(); ?>
               </p>
             </article>
+            <?php get_the_posts_pagination(); ?>
           <?php } ?>
         </div>
       </div>
