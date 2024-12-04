@@ -38,13 +38,14 @@ get_header();
                 <p><?php the_excerpt(); ?></p>
               </article>
             <?php endwhile; ?>
-
-            <!-- Lägg till klasser för pagineringen här -->
-            <?php the_posts_pagination(array(
-              'mid_size' => 2,
-              'prev_text' => __('Föregående', 'textdomain'),
-              'next_text' => __('Nästa', 'textdomain'),
-            )); ?>
+            <nav class="navigation pagination" aria-label="Sidonumrering för inlägg">
+              <!-- Lägg till klasser för pagineringen här -->
+              <?php the_posts_pagination(array(
+                'mid_size' => 2,
+                'prev_text' => '<span class="next page-numbers">Föregående</span>',
+                'next_text' =>  '<span class="next page-numbers">Nästa</span>',
+              )); ?>
+            </nav>
 
           <?php else : ?>
             <p><?php _e('Inga inlägg hittades.', 'textdomain'); ?></p>

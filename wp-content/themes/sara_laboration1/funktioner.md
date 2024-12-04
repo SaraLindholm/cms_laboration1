@@ -82,3 +82,12 @@ labb1_widgets_init(); // Anpassad funktion för att registrera widgets i temat.
 labb1_wp_enqueue_scripts(); // Anpassad funktion för att ladda in CSS och JavaScript i temat.
 labb1_excerpt_length(); // En anpassad funktion för att ändra längden på utdrag.
 labb1_excerpt_more(); // En anpassad funktion för att ändra "läs mer"-texten i utdrag.
+
+
+ <nav class="navigation pagination" aria-label="Sidonumrering för inlägg">
+    <h2 class="screen-reader-text">Sidonumrering för inlägg</h2>
+    <span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="">2</a>
+<a class="next page-numbers" href="">Nästa</a>
+</nav>
+ 
