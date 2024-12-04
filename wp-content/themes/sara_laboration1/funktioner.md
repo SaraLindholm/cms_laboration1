@@ -30,8 +30,7 @@ the_category(); // Visar kategorier för det aktuella inlägget.
 
 // Utdrag (Excerpt)
 the_excerpt(); // Visar ett kort utdrag från inlägget.
-labb1_excerpt_length(); // En anpassad funktion för att ändra längden på utdrag.
-labb1_excerpt_more(); // En anpassad funktion för att ändra "läs mer"-texten i utdrag.
+
 
 // Sidhuvud och sidfot
 get_header(); // Hämtar header-filen (vanligtvis header.php).
@@ -57,10 +56,7 @@ while(); // Itererar genom varje inlägg i en loop.
 get_the_posts_pagination(); // Genererar sidindelningslänkar för flersidiga listor.
 labb1_navigation_markup_template(); // Anpassad funktion för att ändra utseendet på navigeringens markup.
 
-// Temaspecifika funktioner
-labb1_after_setup_theme(); // Anpassad funktion för att köra kod vid temat initialization.
-labb1_widgets_init(); // Anpassad funktion för att registrera widgets i temat.
-labb1_wp_enqueue_scripts(); // Anpassad funktion för att ladda in CSS och JavaScript i temat.
+
 labb1_gratis_cleanup_head(); // Anpassad funktion för att ta bort onödig metadata från <head>.
 
 // URL- och metadatafunktioner
@@ -77,3 +73,12 @@ single_post_title(); // Hämtar titeln på det aktuella inlägget för enkel anv
 wp_enqueue_style(); // Laddar in en CSS-fil.
 wp_dequeue_style(); // Tar bort en CSS-fil från kölistan.
 wp_enqueue_script(); // Laddar in en JavaScript-fil.
+
+
+ De funktioner som börjar med labb_1 är till för olika action/filter i functions.php. Kroknamnen är samma som slutet på funktionerna.
+ // Temaspecifika funktioner
+labb1_after_setup_theme(); // Anpassad funktion för att köra kod vid temat initialization.
+labb1_widgets_init(); // Anpassad funktion för att registrera widgets i temat.
+labb1_wp_enqueue_scripts(); // Anpassad funktion för att ladda in CSS och JavaScript i temat.
+labb1_excerpt_length(); // En anpassad funktion för att ändra längden på utdrag.
+labb1_excerpt_more(); // En anpassad funktion för att ändra "läs mer"-texten i utdrag.

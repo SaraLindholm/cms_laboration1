@@ -60,3 +60,12 @@ function my_theme_enqueue_styles()
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
+
+
+add_filter('excerpt_length', function () {
+  return 66;
+});
+add_filter('excerpt_more', function () {
+  return '';
+});
