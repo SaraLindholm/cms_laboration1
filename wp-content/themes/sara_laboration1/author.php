@@ -7,7 +7,7 @@ get_header();
     <div class="container">
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-9">
-          <h1>indexsidan</h1>
+          <h1>Författare: <?php get_bloginfo('name'); ?></h1>
           <?php
           // Starta loopen
           if (have_posts()) :

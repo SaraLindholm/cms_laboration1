@@ -38,12 +38,12 @@ get_header();
                 <p><?php the_excerpt(); ?></p>
               </article>
             <?php endwhile; ?>
-            <nav class="navigation pagination" aria-label="Sidonumrering för inlägg">
+            <nav class="pagination" aria-label="Sidonumrering för inlägg">
               <!-- Lägg till klasser för pagineringen här -->
               <?php the_posts_pagination(array(
                 'mid_size' => 2,
-                'prev_text' => '<span class="next page-numbers">Föregående</span>',
-                'next_text' =>  '<span class="next page-numbers">Nästa</span>',
+                'prev_text' => '<span class="page-numbers">Föregående</span>',
+                'next_text' =>  '<span class="page-numbers">Nästa</span>',
               )); ?>
             </nav>
 
