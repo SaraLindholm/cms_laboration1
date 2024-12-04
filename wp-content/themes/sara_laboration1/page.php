@@ -1,3 +1,4 @@
+<!-- används på undersida-undersida 4 -->
 <?php
 include 'helper.php';
 get_header();
@@ -19,6 +20,7 @@ get_header();
           <?php if (has_post_thumbnail()) { ?>
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="bild-text">
           <?php } ?>
+
         </div>
       </div>
     </div>
