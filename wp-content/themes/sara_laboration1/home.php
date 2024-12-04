@@ -21,8 +21,7 @@ get_header();
                 </li>
                 <li>
                   <i class="fa fa-user"></i>
-
-                  <a href="<?php echo get_permalink(get_page_by_path('forfattare')); ?>  title=" rel="author"><?php echo the_author() ?></a>
+                  <?php echo get_the_author_posts_link(); ?>
                 </li>
                 <li>
                   <i class="fa fa-tag"></i><?php
