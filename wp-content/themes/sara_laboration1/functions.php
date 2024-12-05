@@ -30,14 +30,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('wp_head', 'rel_canonical');
 
 
-
-// add_action('after_setup_theme', 'disable_block_widgets');
-// function disable_block_widgets()
-// {
-//   remove_theme_support('widgets-block-editor');
-// }
-
-function sl_theme_setup()
+function sl_after_theme_setup()
 {
   add_theme_support('post-thumbnails');
   add_theme_support('menus');
@@ -47,7 +40,70 @@ function sl_theme_setup()
 }
 
 
-add_action('after_setup_theme', 'sl_theme_setup'); //För att invänta rätt plats i produktionen
+add_action('after_setup_theme', 'sl_after_theme_setup'); //För att invänta rätt plats i produktionen
+
+function sl_widgets_init()
+{
+  register_sidebar(array(
+    'name' => 'Kort om oss',
+    'id' => 'footer-about',
+    'description' => 'Kort om oss',
+    'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // Anpassad HTML för varje widget
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+  // register_sidebar(array(
+  //   'name' => 'widget-footer',
+  //   'id' => 'sidebar-footer',
+  //   'description' => 'Sidebar',
+  //   'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // möjlighet att ändra html på widgeten
+  //   'after_widget' => '</div>',
+  //   'before_title' => '<h4>',
+  //   'after_title' => '</h4>'
+  // ));
+
+  // register_sidebar(array(
+  //   'name' => 'widget aside Blogg',
+  //   'id' => 'sidebar-blogg',
+  //   'description' => 'Sidebar',
+  //   'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // möjlighet att ändra html på widgeten
+  //   'after_widget' => '</div>',
+  //   'before_title' => '<h4>',
+  //   'after_title' => '</h4>'
+  // ));
+
+  register_sidebar(array(
+    'name' => 'Kontaktuppgifter',
+    'id' => 'footer-contact',
+    'description' => 'Kontaktuppgifter',
+    'before_widget' => '<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Social media',
+    'id' => 'footer-social',
+    'description' => 'Social media',
+    'before_widget' => '<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+  register_sidebar(array(
+    'name' => 'Copyright',
+    'id' => 'Copyright',
+    'description' => 'Social media',
+    'before_widget' => '<div class="col-xs-12">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+}
+add_action('widgets_init', 'sl_widgets_init');
 
 function my_theme_style()
 {

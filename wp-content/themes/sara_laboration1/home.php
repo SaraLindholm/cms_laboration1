@@ -17,7 +17,7 @@ get_header();
                 <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <ul class="meta">
                   <li>
-                    <i class="fa fa-calendar"></i><?php the_date(); ?>
+                    <i class="fa fa-calendar"></i><?php echo get_the_date(); ?>
                   </li>
                   <li>
                     <i class="fa fa-user"></i>
@@ -54,6 +54,5 @@ get_header();
       </div>
     </div>
   </section>
-  <?php get_sidebar('footer'); ?>
 </main>
 <?php get_footer(); ?>
