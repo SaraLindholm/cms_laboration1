@@ -16,41 +16,15 @@ get_header();
               <article>
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                 <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <ul class="meta">
-                  <li>
-                    <i class="fa fa-calendar"></i><?php the_date(); ?>
-                  </li>
-                  <li>
-                    <i class="fa fa-user"></i>
-                    <?php echo get_the_author_posts_link(); ?>
-                  </li>
-                  <li>
-                    <i class="fa fa-tag"></i><?php
-                                              // Hämta kategorier för inlägget
-                                              $categories = get_the_category();
-
-                                              if (!empty($categories)) {
-                                                foreach ($categories as $category) {
-                                                  echo '<a href="' . esc_url(home_url('/kategorier/?kategori=' . $category->slug)) . '" rel="category tag">' . esc_html($category->name) . '</a> ';
-                                                }
-                                              }
-                                              ?>
-                  </li>
-                </ul>
                 <p><?php the_content(); ?></p>
               </article>
             <?php endwhile; ?>
-
-            <!-- Lägg till klasser för pagineringen här -->
-            <?php the_posts_pagination(array(
-              'mid_size' => 2,
-              'prev_text' => __('Föregående', 'textdomain'),
-              'next_text' => __('Nästa', 'textdomain'),
-            )); ?>
-
           <?php else : ?>
-            <p><?php _e('Inga inlägg hittades.', 'textdomain'); ?></p>
+            <p>Inga inlägg hittades.</p>
           <?php endif; ?>
+
+
+
         </div>
       </div>
     </div>
