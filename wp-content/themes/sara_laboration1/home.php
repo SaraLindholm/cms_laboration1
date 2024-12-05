@@ -29,7 +29,7 @@ get_header();
                     $categories = get_the_category();
                     if (!empty($categories)) {
                       foreach ($categories as $category) {
-                        echo '<a href="' . esc_url(home_url('/kategorier/?kategori=' . $category->slug)) . '" rel="category tag">' . esc_html($category->name) . '</a> ';
+                        echo '<a href="' . esc_url(get_category_link($category->term_id)) . '" rel="category tag">' . esc_html($category->name) . '</a> ';
                       }
                     }
                     ?>
