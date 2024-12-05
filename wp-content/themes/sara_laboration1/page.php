@@ -7,19 +7,23 @@ get_header();
   <section>
     <div class="container">
       <div class="row">
-        <div id="primary" class="col-xs-12 col-md-9">
+        <div id="primary" class="col-xs-12 col-sm-8 col-md-6">
           <?php
           while (have_posts()) {
             the_post(); ?>
             <h1><?php the_title(); ?></h1>
             <p><?php the_content(); ?></p>
-          <?php } ?>
+
         </div>
         <!--visar bild om det finns -->
         <div class="col-xs-12 col-sm-4 col-md-6">
           <?php if (has_post_thumbnail()) { ?>
-            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="bild-text">
+            <img src="<?php the_post_thumbnail_url(); ?>" alt="bild-text">
+
+
+            <!-- <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'style' => 'width:auto; height:auto;']); ?> -->
           <?php } ?>
+        <?php } ?>
 
         </div>
       </div>

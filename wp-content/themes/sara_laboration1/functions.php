@@ -29,19 +29,25 @@ add_action('wp_enqueue_scripts', 'labb1_gratis_cleanup_head', 100);
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('wp_head', 'rel_canonical');
 
-add_action('after_setup_theme', 'disable_block_widgets');
-function disable_block_widgets()
-{
-  remove_theme_support('widgets-block-editor');
-}
 
-function my_theme_setup()
+
+// add_action('after_setup_theme', 'disable_block_widgets');
+// function disable_block_widgets()
+// {
+//   remove_theme_support('widgets-block-editor');
+// }
+
+function sl_theme_setup()
 {
   add_theme_support('post-thumbnails');
   add_theme_support('menus');
   add_theme_support('title-tag');
+  add_theme_support('widgets');
+  remove_theme_support('widgets-block-editor');
 }
-add_action('after_setup_theme', 'my_theme_setup'); //För att invänta rätt plats i produktionen
+
+
+add_action('after_setup_theme', 'sl_theme_setup'); //För att invänta rätt plats i produktionen
 
 function my_theme_style()
 {
@@ -62,7 +68,7 @@ function my_theme_enqueue_styles()
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 
-
+//för att styra antal ord som visas i inläggets sammanfattning samt avslutar med en tom sträng,
 add_filter('excerpt_length', function () {
   return 66;
 });
