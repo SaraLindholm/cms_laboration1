@@ -21,8 +21,8 @@ include 'helper.php'; ?>
           </div>
           <div class="col-sm-6 hidden-xs">
             <form class="searchform">
-
-              <div><?php get_search_form(); ?>
+              <div>
+                <label class="screen-reader-text">Sök efter:</label><?php get_search_form(); ?>
               </div>
             </form>
           </div>
@@ -35,15 +35,17 @@ include 'helper.php'; ?>
         </div>
       </div>
     </header>
-
-    <div class="container">
-      <div class="row">
-        <!-- för smala skärmar? -->
-        <div class="col-xs-8 col-sm-6"></div>
-        <div class="col-sm-6 hidden-xs"></div>
-      </div>
+    <div class="mobile-search">
+      <form class="searchform">
+        <div>
+          <label class="screen-reader-text">Sök efter:</label>
+          <input type="text" />
+          <input type="submit" value="Sök" />
+        </div>
+      </form>
     </div>
-    </header>
+
+
     <nav id="nav">
       <div class="container">
         <div class="row">
