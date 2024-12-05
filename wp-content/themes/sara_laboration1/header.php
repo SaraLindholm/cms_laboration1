@@ -17,11 +17,11 @@ include 'helper.php'; ?>
       <div class="container">
         <div class="row">
           <div class="col-xs-8 col-sm-6">
-            <a class="logo" href="<?php echo get_permalink(get_page_by_path('home')); ?>">Labb 1</a>
+            <a class="logo" href="<?php home_url(); ?>">Labb 1</a>
           </div>
           <div class="col-sm-6 hidden-xs">
             <form class="searchform">
-              
+
               <div><?php get_search_form(); ?>
               </div>
             </form>
@@ -36,13 +36,13 @@ include 'helper.php'; ?>
       </div>
     </header>
 
-        <div class="container">
-          <div class="row">
-            <!-- för smala skärmar? -->
-            <div class="col-xs-8 col-sm-6"></div>
-            <div class="col-sm-6 hidden-xs"></div>
-          </div>
-        </div>
+    <div class="container">
+      <div class="row">
+        <!-- för smala skärmar? -->
+        <div class="col-xs-8 col-sm-6"></div>
+        <div class="col-sm-6 hidden-xs"></div>
+      </div>
+    </div>
     </header>
     <nav id="nav">
       <div class="container">

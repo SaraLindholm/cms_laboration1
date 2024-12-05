@@ -51,6 +51,12 @@ get_header();
             <p><?php _e('Inga inlägg hittades.', 'textdomain'); ?></p>
           <?php endif; ?>
         </div>
+        <aside id="secondary" class="col-xs-12 col-md-3">
+          <div id="sidebar">
+            <?php dynamic_sidebar('sidebar-blogg'); ?>
+
+          </div>
+        </aside>
       </div>
     </div>
   </section>

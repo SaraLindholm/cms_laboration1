@@ -54,25 +54,16 @@ function sl_widgets_init()
     'after_title' => '</h4>',
   ));
 
-  // register_sidebar(array(
-  //   'name' => 'widget-footer',
-  //   'id' => 'sidebar-footer',
-  //   'description' => 'Sidebar',
-  //   'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // möjlighet att ändra html på widgeten
-  //   'after_widget' => '</div>',
-  //   'before_title' => '<h4>',
-  //   'after_title' => '</h4>'
-  // ));
 
-  // register_sidebar(array(
-  //   'name' => 'widget aside Blogg',
-  //   'id' => 'sidebar-blogg',
-  //   'description' => 'Sidebar',
-  //   'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // möjlighet att ändra html på widgeten
-  //   'after_widget' => '</div>',
-  //   'before_title' => '<h4>',
-  //   'after_title' => '</h4>'
-  // ));
+  register_sidebar(array(
+    'name' => 'widget aside Blogg',
+    'id' => 'sidebar-blogg',
+    'description' => 'Sidebar',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => ''
+  ));
 
   register_sidebar(array(
     'name' => 'Kontaktuppgifter',
