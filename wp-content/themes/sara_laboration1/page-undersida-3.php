@@ -6,9 +6,8 @@ get_header();
 <main>
   <section>
     <div class="container">
-    <h1>undersida333333</h1>
       <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-8 col-md-6">
+        <div id="primary" class="col-xs-12">
           <?php
           while (have_posts()) {
             the_post(); ?>
