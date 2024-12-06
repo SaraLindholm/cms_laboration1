@@ -41,7 +41,7 @@ get_header();
               </article>
             <?php endwhile; ?>
 
-            <!-- Lägg till klasser för pagineringen här -->
+            <!-- TODO Lägg till klasser för pagineringen här -->
             <?php the_posts_pagination(array(
               'mid_size' => 2,
               'prev_text' => __('Föregående', 'textdomain'),

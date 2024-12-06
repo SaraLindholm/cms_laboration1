@@ -19,7 +19,7 @@ get_header();
                 <p><?php the_excerpt(); ?></p>
               </article>
             <?php endwhile; ?>
-
+            <!-- TODO lägg till klasser för knapparna -->
             <nav class="pagination" aria-label="Sidonumrering för inlägg">
               <!-- Lägg till klasser för pagineringen här -->
               <?php the_posts_pagination(array(
@@ -28,8 +28,9 @@ get_header();
                 'next_text' =>  '<span class="page-numbers">Nästa</span>',
               )); ?>
             </nav>
+
           <?php else : ?>
-            <p>Inga resultat hittades för din sökning.</p>
+            <p><?php _e('Inga inlägg hittades.', 'textdomain'); ?></p>
           <?php endif; ?>
         </div>
       </div>
