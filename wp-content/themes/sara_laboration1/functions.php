@@ -30,6 +30,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('wp_head', 'rel_canonical');
 
 
+
 function sl_after_theme_setup()
 {
   add_theme_support('post-thumbnails');
@@ -41,6 +42,11 @@ function sl_after_theme_setup()
 
 
 add_action('after_setup_theme', 'sl_after_theme_setup'); //För att invänta rätt plats i produktionen
+
+
+
+
+
 
 function sl_widgets_init()
 {

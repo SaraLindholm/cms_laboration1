@@ -38,8 +38,10 @@ get_header();
                 <p><?php the_excerpt(); ?></p>
               </article>
             <?php endwhile; ?>
+
+
             <!-- TODO lägg till klasser för knapparna -->
-            <nav class="pagination" aria-label="Sidonumrering för inlägg">
+            <nav class="pagination pagination" aria-label="Sidonumrering för inlägg">
               <!-- Lägg till klasser för pagineringen här -->
               <?php the_posts_pagination(array(
                 'mid_size' => 2,
