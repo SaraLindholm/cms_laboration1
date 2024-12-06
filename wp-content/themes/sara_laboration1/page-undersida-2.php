@@ -27,12 +27,13 @@ get_header();
             </div>
         </div>
 
+        <!-- TODO- gör om html.text till php -->
         <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
           <ul id="menu-sidomeny" class="side-menu">
-            <li><a href="undersida.html">Undersida</a></li>
-            <li class="current-menu-item"><a href="undersida-2.html" aria-current="page">Undersida 2</a></li>
-            <li><a href="undersida-3.html">Undersida 3</a></li>
-            <li><a href="undersida-4.html">Undersida 4</a></li>
+            <li><a href="<?php echo get_permalink(get_page_by_path('undersida')); ?>">Undersida</a></li>
+            <li class="current-menu-item"><a href="<?php echo get_permalink(get_page_by_path('undersida-2')); ?>">Undersida 2</a></li>
+            <li><a href="<?php echo get_permalink(get_page_by_path('undersida-3')); ?>">Undersida 3</a></li>
+            <li><a href="<?php echo get_permalink(get_page_by_path('undersida-4')); ?>">Undersida 4</a></li>
           </ul>
         </aside>
 
