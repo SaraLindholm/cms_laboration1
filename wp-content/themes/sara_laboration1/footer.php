@@ -9,12 +9,12 @@ include 'helper.php'; ?>
       <?php dynamic_sidebar('footer-social'); ?>
     </div>
     <div class="row bottom">
-      <?php dynamic_sidebar('copyright'); ?>
+      <div class="col-xs-12">
+        <p>Copyright &copy; Grupp X, <?php echo date('Y') ?></p>
+      </div>
     </div>
   </div>
 </footer>
-
-
 </div>
 </body>
 
