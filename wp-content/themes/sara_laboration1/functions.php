@@ -45,7 +45,7 @@ add_action('after_setup_theme', 'sl_after_theme_setup'); //För att invänta rä
 function sl_widgets_init()
 {
   register_sidebar(array(
-    'name' => 'Kort om oss',
+    'name' => 'Footer-Kort om oss',
     'id' => 'footer-about',
     'description' => 'Kort om oss',
     'before_widget' => '<div class="col-xs-12 col-sm-6 col-md-4">', // Anpassad HTML för varje widget
@@ -54,19 +54,8 @@ function sl_widgets_init()
     'after_title' => '</h4>',
   ));
 
-
   register_sidebar(array(
-    'name' => 'widget aside Blogg',
-    'id' => 'sidebar-blogg',
-    'description' => 'Sidebar',
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '',
-    'after_title' => ''
-  ));
-
-  register_sidebar(array(
-    'name' => 'Kontaktuppgifter',
+    'name' => 'Footer-Kontaktuppgifter',
     'id' => 'footer-contact',
     'description' => 'Kontaktuppgifter',
     'before_widget' => '<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">',
@@ -76,7 +65,7 @@ function sl_widgets_init()
   ));
 
   register_sidebar(array(
-    'name' => 'Social media',
+    'name' => 'Footer-Social media',
     'id' => 'footer-social',
     'description' => 'Social media',
     'before_widget' => '<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">',
@@ -84,25 +73,55 @@ function sl_widgets_init()
     'before_title' => '<h4>',
     'after_title' => '</h4>',
   ));
-  register_sidebar(array(
-    'name' => 'Copyright',
-    'id' => 'Copyright',
-    'description' => 'Social media',
-    'before_widget' => '<div class="col-xs-12">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4>',
-    'after_title' => '</h4>',
-  ));
+
 
   register_sidebar(array(
-    'name' => 'Sök',
+    'name' => 'Blogg-Sök',
     'id' => 'aside-sok',
     'description' => 'Sök',
     'before_widget' => '', // Anpassad HTML för varje widget
     'after_widget' => '',
-    'before_title' => '<h4>',
-    'after_title' => '</h4>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
   ));
+
+  register_sidebar(array(
+    'name' => 'Blogg-Sidor',
+    'id' => 'aside-sidor',
+    'description' => 'Sidor',
+    'before_widget' => '<li class="page_item">', // Anpassad HTML för varje widget
+    'after_widget' => '</li>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Blogg-Arkiv',
+    'id' => 'aside-arkiv',
+    'description' => 'Sidor',
+    'before_widget' => '', // Anpassad HTML för varje widget
+    'after_widget' => '',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Blogg-Kategorier',
+    'id' => 'aside-kategori',
+    'description' => 'Kategorier',
+    'before_widget' => '', // Anpassad HTML för varje widget
+    'after_widget' => '',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+  ));
+
+  // Ta bort omslutande <div> på Widgets
+  function customize_widget_nav_menu_args($args)
+  {
+    $args['container'] = false;
+    return $args;
+  }
+  add_filter('widget_nav_menu_args', 'customize_widget_nav_menu_args');
 }
 add_action('widgets_init', 'sl_widgets_init');
 
