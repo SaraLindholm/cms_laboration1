@@ -93,6 +93,16 @@ function sl_widgets_init()
     'before_title' => '<h4>',
     'after_title' => '</h4>',
   ));
+
+  register_sidebar(array(
+    'name' => 'Sök',
+    'id' => 'aside-sok',
+    'description' => 'Sök',
+    'before_widget' => '', // Anpassad HTML för varje widget
+    'after_widget' => '',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
 }
 add_action('widgets_init', 'sl_widgets_init');
 

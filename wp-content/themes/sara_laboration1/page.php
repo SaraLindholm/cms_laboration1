@@ -1,4 +1,3 @@
-<!-- används på undersida-undersida 4 -->
 <?php
 include 'helper.php';
 get_header();
@@ -7,7 +6,7 @@ get_header();
   <section>
     <div class="container">
       <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-8 col-md-6">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
           <?php
           while (have_posts()) {
             the_post(); ?>

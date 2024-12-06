@@ -1,6 +1,6 @@
 // Hooks (Actions och Filters)
-add_action(); // Lägger till en funktion som körs vid en specifik action hook.
-add_filter(); // Modifierar data eller beteende genom en filter hook.
+~~add_action(); // Lägger till en funktion som körs vid en specifik action hook.~~
+~~add_filter(); // Modifierar data eller beteende genom en filter hook.~~
 remove_action(); // Tar bort en funktion som är kopplad till en action hook.
 remove_filter(); // Tar bort en funktion kopplad till en filter hook.
 
