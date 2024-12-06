@@ -1,4 +1,3 @@
-<!-- används på undersida-undersida 4 -->
 <?php
 include 'helper.php';
 get_header();
@@ -16,7 +15,6 @@ get_header();
           <?php } ?>
 
         </div>
-
         <!-- TODO- gör om html till php -->
         <aside id="secondary" class="col-xs-12 col-md-3">
           <ul id="menu-sidomeny" class="side-menu">
@@ -29,7 +27,7 @@ get_header();
       </div>
 
 
-    </div>
+
     </div>
   </section>
 </main>

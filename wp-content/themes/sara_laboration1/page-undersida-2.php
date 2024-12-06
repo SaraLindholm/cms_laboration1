@@ -1,4 +1,3 @@
-<!-- används på undersida-undersida 4 -->
 <?php
 include 'helper.php';
 get_header();
@@ -18,12 +17,8 @@ get_header();
             <div class="col-xs-12 col-sm-4 col-md-6">
               <?php if (has_post_thumbnail()) { ?>
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="bild-text">
-
-
-                <!-- <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'style' => 'width:auto; height:auto;']); ?> -->
               <?php } ?>
             <?php } ?>
-
             </div>
         </div>
 
@@ -36,9 +31,8 @@ get_header();
             <li><a href="<?php echo get_permalink(get_page_by_path('undersida-4')); ?>">Undersida 4</a></li>
           </ul>
         </aside>
-
-
       </div>
+
     </div>
   </section>
 </main>

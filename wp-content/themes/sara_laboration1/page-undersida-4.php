@@ -1,11 +1,9 @@
-<!-- används på undersida-undersida 4 -->
 <?php
 include 'helper.php';
 get_header();
 ?>
 <main>
   <section>
-    <h1>undersida44444</h1>
     <div class="container">
       <div class="row">
         <div id="primary" class="col-xs-12 col-sm-8 col-md-6">
@@ -20,9 +18,6 @@ get_header();
         <div class="col-xs-12 col-sm-4 col-md-6">
           <?php if (has_post_thumbnail()) { ?>
             <img src="<?php the_post_thumbnail_url(); ?>" alt="bild-text">
-
-
-            <!-- <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'style' => 'width:auto; height:auto;']); ?> -->
           <?php } ?>
         <?php } ?>
 
