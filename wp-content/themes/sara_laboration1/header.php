@@ -19,14 +19,20 @@ include 'helper.php'; ?>
           <div class="col-xs-8 col-sm-6">
             <a class="logo" href="<?php home_url(); ?>">Labb 1</a>
           </div>
-          <div class="col-sm-6 hidden-xs">
+          <!-- <div class="col-sm-6 hidden-xs">
            <form class="searchform">
-              <!--  TODO- dubbel form i källkoden -->
+               TODO- dubbel form i källkoden
             <div>
               <label class="screen-reader-text">Sök efter:</label><?php get_search_form(); ?>
             </div>
             </form>
+          </div> -->
+
+          <div class="col-sm-6 hidden-xs">
+            <?php get_search_form(); ?>
+
           </div>
+
           <div class="col-xs-4 text-right visible-xs">
             <div class="mobile-menu-wrap">
               <i class="fa fa-search"></i>
