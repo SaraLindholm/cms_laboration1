@@ -20,10 +20,11 @@ include 'helper.php'; ?>
             <a class="logo" href="<?php home_url(); ?>">Labb 1</a>
           </div>
           <div class="col-sm-6 hidden-xs">
-            <form class="searchform">
-              <div>
-                <label class="screen-reader-text">Sök efter:</label><?php get_search_form(); ?>
-              </div>
+           <form class="searchform">
+              <!--  TODO- dubbel form i källkoden -->
+            <div>
+              <label class="screen-reader-text">Sök efter:</label><?php get_search_form(); ?>
+            </div>
             </form>
           </div>
           <div class="col-xs-4 text-right visible-xs">
